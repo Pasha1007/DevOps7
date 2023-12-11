@@ -1,0 +1,7 @@
+#Connect to your intance using ssh dynamic port
+ssh -i "FirstKeyPair.pem" -D 1080 ubuntu@<your_public_dns>
+#Connect to your intance using ssh remote port forwarding
+ssh -i "FirstKeyPair.pem" -R 9090:localhost:8080 ubuntu@<your_public_dns>
+
+# Запуск HTTP сервера на порті 8000
+python3 -m http.server 8080
